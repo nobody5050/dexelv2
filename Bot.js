@@ -11,7 +11,6 @@ client.on('ready', () => {
 });
 
  
-
 client.on('message', message => {
 
     if (message.content === 'ping') {
@@ -21,6 +20,17 @@ client.on('message', message => {
        }
 
 });
+
+client.on('message', message => {
+
+    if (message.content === 'Ping') {
+
+       message.reply('pong');
+
+       }
+
+});
+
 
  
 
