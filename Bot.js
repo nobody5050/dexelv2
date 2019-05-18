@@ -21,13 +21,7 @@ client.on('message', message => {
        }
 
 });
-client.on('message', message => {
- 
- if(message.content === 'say') {
-const sayMessage = args.join(" ");
-message.delete().catch(O_o=>{}); 
-message.channel.send(sayMessage);
-  } }
+
  
 client.on('guildMemberAdd', member => {
   // Send the message to a designated channel on a server:
