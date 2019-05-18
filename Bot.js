@@ -5,6 +5,10 @@ client.on("ready", () => {
   console.log("I am ready!");
 });
  
+client.on("ready", () => {
+    client.user.setActivity("your every move", { type: "WATCHING"})
+})
+
 // Set the prefix
 let prefix = "!";
 client.on("message", (message) => {
