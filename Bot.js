@@ -2,19 +2,14 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json");
  
-client.on("message", message => {
-  if (message.author.bot) return;
-  // This is where we'll put our code.
-  if (message.content.indexOf(config.prefix) !== 0) return;
+client.on("message", (message) => {
+  if (!message.content.startsWith(config.prefix) || message.author.bot) return;
  
-  const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase();
- 
-  if(command === 'ping') {
-    message.channel.send('Pong!');
+  if (message.content.startsWith(config.prefix + "ping")) {
+    message.channel.send("pong!");
   } else
-  if (command === 'blah') {
-    message.channel.send('Meh.');
+  if (message.content.startsWith(config.prefix + "foo")) {
+    message.channel.send("bar!");
   }
 });
 
