@@ -23,7 +23,7 @@ client.on("message", (message) => {
   }
 });
 bot.on('message', async message => {
-    if (message.Channel.type === 'DM'){ 
+    if (Message.channel.type === 'DM'){ 
         console.log(message.content);
         if(message.content === "something"){
             return await message.channel.send("Hi!");
