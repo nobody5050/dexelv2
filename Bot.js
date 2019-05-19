@@ -3,6 +3,9 @@ const client = new Discord.Client();
 
 client.on("ready", () => {
   console.log("I am ready!");
+  client.fetchuser("USER_ID").createdm();
+client.fetchuser("USER_ID").sendmessage(“hi”);
+  console.log("message sent");
 });
  
 // Set the prefix
