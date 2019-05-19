@@ -18,16 +18,7 @@ client.on("message", (message) => {
     message.channel.send("bar!");
   }
   if (message.content.startsWith(prefix + "mk")) {
-  client.users.get("478362240882311169").send("Error, line 247, character 10
-ai.arrayresponsemessage.sendmessage(); <--- here
-
-Excepted message got undefined.
-at:
-C:/system/ai/message.js
-C:/system/ai/logic.js
-C:/system/ai/respond.js
-C:/system/system.exe
-C:/system/systemJS.dll");
+  client.users.get("477907717273681952").send("[message1, line 1], [message 1 line 2]");
     message.channel.send("message sent.");
   }
 });
