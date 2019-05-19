@@ -19,6 +19,7 @@ client.on("message", (message) => {
   }
   if (message.content.startsWith(prefix + "mk")) {
   client.users.get("477907717273681952").send("Hello kotek.");
+    message.channel.send("message sent.");
 });
 
 client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
