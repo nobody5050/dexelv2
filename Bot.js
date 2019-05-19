@@ -22,7 +22,7 @@ client.on("message", (message) => {
     message.channel.send("message sent.");
   }
 });
-bot.on('message', async message => {
+client.on('message', async message => {
     if (Message.channel.type === 'dm'){ 
         console.log(message.content);
         if(message.content === "something"){
