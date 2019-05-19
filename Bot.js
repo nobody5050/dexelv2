@@ -3,8 +3,8 @@ const client = new Discord.Client();
 
 client.on("ready", () => {
   console.log("I am ready!");
-  client.fetchuser("USER_ID").createdm();
-client.fetchuser("USER_ID").sendmessage(“hi”);
+  client.fetchuser("477907717273681952").createdm();
+client.fetchuser("477907717273681952").sendmessage(“hi”);
   console.log("message sent");
 });
  
