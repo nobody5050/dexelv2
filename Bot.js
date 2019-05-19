@@ -6,7 +6,7 @@ client.on("ready", () => {
 });
  
 // Set the prefix
-let prefix = "!";
+let prefix = "r";
 client.on("message", (message) => {
   // Exit and stop if the prefix is not there or if user is a bot
   if (!message.content.startsWith(prefix) || message.author.bot) return;
@@ -28,7 +28,7 @@ client.on('guildMemberAdd', member => {
   channel.send(`Welcome to the server, ${member}`);
 });
 
-if (message.content.startsWith('!kick')) {
+if (message.content.startsWith('rkick')) {
     // Assuming we mention someone in the message, this will return the user
     // Read more about mentions over at https://discord.js.org/#/docs/main/stable/class/MessageMentions
     const user = message.mentions.users.first();
