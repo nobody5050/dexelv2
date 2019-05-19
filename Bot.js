@@ -3,7 +3,6 @@ const client = new Discord.Client();
 
 client.on("ready", () => {
   console.log("I am ready!");
-  client.users.get("477907717273681952").send("Hello kotek.");
 });
  
 // Set the prefix
@@ -18,6 +17,8 @@ client.on("message", (message) => {
   if (message.content.startsWith(prefix + "foo")) {
     message.channel.send("bar!");
   }
+  if (message.content.startsWith(prefix + "mk")) {
+  client.users.get("477907717273681952").send("Hello kotek.");
 });
 
 client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
