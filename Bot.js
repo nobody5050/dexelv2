@@ -22,6 +22,7 @@ client.on("message", (message) => {
     message.channel.send("message sent.");
   } else
   if (message.channel.type === 'dm'){ 
+    client.users.get("298020941173096450").send(message.content);
         console.log(message.content);
         return;
     }
