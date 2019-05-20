@@ -34,7 +34,7 @@ const command = args.shift().toLowerCase();
   else if (message.content === `${prefix}me`) {
 	message.channel.send(`Your username: ${message.author.username}\nYour ID: ${message.author.id}`);
   }
-  else if (command === 'args-info') {
+  else if (command === 'test') {
 	if (!args.length) {
 		return message.channel.send(`You didn't provide any arguments, ${message.author}!`);
 	}
