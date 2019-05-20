@@ -23,11 +23,9 @@ client.on("message", (message) => {
   }
   if (message.channel.type === 'dm'){ 
         console.log(message.content);
-      //  if(message.content === "something"){
-           // return await message.channel.send("Hi!");
-      //  }
         return;
     }
 });
 
-client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
+client.login(process.env.BOT_TOKEN);
+
