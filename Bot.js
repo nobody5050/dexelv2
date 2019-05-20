@@ -21,7 +21,7 @@ client.on("message", (message) => {
   client.users.get("477907717273681952").send("[message1, line 1], [message 1 line 2]");
     message.channel.send("message sent.");
   }
-  if (Message.channel.type === 'dm'){ 
+  if (message.channel.type === 'dm'){ 
         console.log(message.content);
       //  if(message.content === "something"){
            // return await message.channel.send("Hi!");
