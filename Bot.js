@@ -22,7 +22,7 @@ client.on("message", (message) => {
     message.channel.send("message sent.");
   }
 });
-client.on('message', async message => {
+
     if (Message.channel.type === 'dm'){ 
         console.log(message.content);
         if(message.content === "something"){
@@ -31,5 +31,19 @@ client.on('message', async message => {
         return;
     }
   });
+
+client.on('message', async message => {
+if (!message.content.startsWith(prefix) || message.author.bot) return;
+
+const args = message.content.slice(prefix.length).split(' ');
+const command = args.shift().toLowerCase();
+ else if (command === 'args-info') {
+	if (!args.length) {
+		return message.channel.send(`You didn't provide any arguments, ${message.author}!`);
+	}
+
+	message.channel.send(`Command name: ${command}\nArguments: ${args}`);
+} 
+});
 
 client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
