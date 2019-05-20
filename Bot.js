@@ -25,9 +25,9 @@ client.on("message", (message) => {
 
     if (Message.channel.type === 'dm'){ 
         console.log(message.content);
-        if(message.content === "something"){
-            return await message.channel.send("Hi!");
-        }
+      //  if(message.content === "something"){
+           // return await message.channel.send("Hi!");
+      //  }
         return;
     }
   });
