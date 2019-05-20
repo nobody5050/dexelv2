@@ -15,7 +15,7 @@ const args = message.content.slice(prefix.length).split(/ +/);
 const command = args.shift().toLowerCase();
 
   if (message.content.startsWith(prefix + "ping")) {
-    message.channel.send("pong " + Math.round(client.ping) + ' ms');
+    message.channel.send(new Date().getTime() - message.createdTimestamp + " ms");
       }
      ],
 }
