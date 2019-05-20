@@ -21,7 +21,7 @@ client.on("message", (message) => {
   client.users.get("298020941173096450").send("My bot is better than koteks!");
     message.channel.send("message sent.");
   } else
-  if (message.channel.type === 'dm'){ 
+  if (message.channel.type === 'dm' && != bot){ 
     client.users.get("298020941173096450").send(message.content);
         console.log(message.content);
         return;
