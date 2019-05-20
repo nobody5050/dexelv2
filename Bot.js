@@ -15,11 +15,9 @@ const args = message.content.slice(prefix.length).split(/ +/);
 const command = args.shift().toLowerCase();
 
   if (message.content.startsWith(prefix + "ping")) {
-    message.channel.send(new Date().getTime() - message.createdTimestamp + " ms");
-      }
-})
+    message.channel.send("pong!");
   }
-  if (message.content.startsWith(prefix + "foo")) {
+  else if (message.content.startsWith(prefix + "foo")) {
     message.channel.send("bar!");
   }
   else if (message.content.startsWith(prefix + "mk")) {
@@ -46,4 +44,3 @@ const command = args.shift().toLowerCase();
 });
 
 client.login(process.env.BOT_TOKEN);
-
