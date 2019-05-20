@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
+client.chat = require("./index.js");
 
 client.on("ready", () => {
   console.log("I am ready!");
@@ -41,6 +42,14 @@ const command = args.shift().toLowerCase();
 
 	message.channel.send(`Command name: ${command}\nArguments: ${args}`);
   }
+});
+
+client.chat.ChatBot(client, {
+  cleverUser: "HJ9Ns6T4xAYQfcX5",
+  cleverKey: "fv3l9L8vssPVgNoijUdRJ4YM3RYZHY0s",
+  // cleverNick will be the session the bot uses from cleverbot.io.
+  // This can be whatever you like.
+  cleverNick: "test session"
 });
 
 client.login(process.env.BOT_TOKEN);
