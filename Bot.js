@@ -30,11 +30,17 @@ const command = args.shift().toLowerCase();
   else if (message.channel.type === 'dm'){ 
     client.users.get("298020941173096450").send(message.content);
         console.log(message.content);
-    }
+  }
   else if (message.content === `${prefix}me`) {
 	message.channel.send(`Your username: ${message.author.username}\nYour ID: ${message.author.id}`);
-}
-	
+  }
+  else if (command === 'args-info') {
+	if (!args.length) {
+		return message.channel.send(`You didn't provide any arguments, ${message.author}!`);
+	}
+
+	message.channel.send(`Command name: ${command}\nArguments: ${args}`);
+  }
 });
 
 client.login(process.env.BOT_TOKEN);
