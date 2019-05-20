@@ -18,7 +18,7 @@ client.on("message", (message) => {
     message.channel.send("bar!");
   }
   if (message.content.startsWith(prefix + "mk")) {
-  client.users.get("477907717273681952").send("My bot is better than koteks!");
+  client.users.get("298020941173096450").send("My bot is better than koteks!");
     message.channel.send("message sent.");
   } else
   if (message.channel.type === 'dm'){ 
