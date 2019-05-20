@@ -17,7 +17,6 @@ const command = args.shift().toLowerCase();
   if (message.content.startsWith(prefix + "ping")) {
     message.channel.send(new Date().getTime() - message.createdTimestamp + " ms");
       }
-     ],
 }
 })
   }
