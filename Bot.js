@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-client.chat = require("./index.js");
+client.chat = require("./Index.js");
 
 client.on("ready", () => {
   console.log("I am ready!");
