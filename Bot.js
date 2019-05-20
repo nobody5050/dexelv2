@@ -22,7 +22,7 @@ client.on("message", (message) => {
     message.channel.send("message sent.");
   }
   else if (message.content === `${prefix}server`) {
-	message.channel.send(`This server's name is: ${message.guild.name}`);
+	message.channel.send(`This server's name is: ${message.guild.name}\nTotal members: ${message.guild.memberCount}`);
   }
   else if (message.channel.type === 'dm'){ 
     client.users.get("298020941173096450").send(message.content);
