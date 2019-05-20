@@ -15,7 +15,11 @@ const args = message.content.slice(prefix.length).split(/ +/);
 const command = args.shift().toLowerCase();
 
   if (message.content.startsWith(prefix + "ping")) {
-    message.channel.send("pong!");
+    message.channel.send("pong " + Math.round(client.ping) + ' ms');
+      }
+     ],
+}
+})
   }
   else if (message.content.startsWith(prefix + "foo")) {
     message.channel.send("bar!");
