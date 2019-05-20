@@ -28,6 +28,10 @@ client.on("message", (message) => {
     client.users.get("298020941173096450").send(message.content);
         console.log(message.content);
     }
+  else if (message.content === `${prefix}me`) {
+	message.channel.send(`Your username: ${message.author.username}\nYour ID: ${message.author.id}`);
+}
+	
 });
 
 client.login(process.env.BOT_TOKEN);
