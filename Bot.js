@@ -11,9 +11,9 @@ client.on("message", (message) => {
   // Exit and stop if the prefix is not there or if user is a bot
   if (!message.content.startsWith(prefix) || message.author.bot) return;
   
-const args = message.content.slice(prefix.length).split(' ');
+const args = message.content.slice(prefix.length).split(/ +/);
 const command = args.shift().toLowerCase();
- 
+
   if (message.content.startsWith(prefix + "ping")) {
     message.channel.send("pong!");
   }
@@ -34,7 +34,7 @@ const command = args.shift().toLowerCase();
   else if (message.content === `${prefix}me`) {
 	message.channel.send(`Your username: ${message.author.username}\nYour ID: ${message.author.id}`);
   }
-  else if (command === 'test') {
+  else if (command === 'args-info') {
 	if (!args.length) {
 		return message.channel.send(`You didn't provide any arguments, ${message.author}!`);
 	}
