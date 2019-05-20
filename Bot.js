@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const ai = ["hello?","hi","howdy"]
+const ai = ["hello?","what is this?","where am I?","what is where?"]
 
 client.on("ready", () => {
   console.log("I am ready!");
@@ -43,7 +43,7 @@ const command = args.shift().toLowerCase();
 	message.channel.send(`Command name: ${command}\nArguments: ${args}`);
   }
   else if (command === 'say') {
-	  message.channel.send(ai[0]);
+	  message.channel.send(ai[0,1,2,3,4]);
   }
 });
 
