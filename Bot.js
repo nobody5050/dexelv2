@@ -19,7 +19,7 @@ const command = args.shift().toLowerCase();
       }
 })
   }
-  else if (message.content.startsWith(prefix + "foo")) {
+  if (message.content.startsWith(prefix + "foo")) {
     message.channel.send("bar!");
   }
   else if (message.content.startsWith(prefix + "mk")) {
