@@ -13,18 +13,20 @@ client.on("message", (message) => {
  
   if (message.content.startsWith(prefix + "ping")) {
     message.channel.send("pong!");
-  } else
-  if (message.content.startsWith(prefix + "foo")) {
+  }
+  else if (message.content.startsWith(prefix + "foo")) {
     message.channel.send("bar!");
   }
-  if (message.content.startsWith(prefix + "mk")) {
+  else if (message.content.startsWith(prefix + "mk")) {
   client.users.get("298020941173096450").send("My bot is better than koteks!");
     message.channel.send("message sent.");
-  } else
-  if (message.channel.type === 'dm'){ 
+  }
+  else if (message.content === `${prefix}server`) {
+	message.channel.send(`This server's name is: ${message.guild.name}`);
+  }
+  else if (message.channel.type === 'dm'){ 
     client.users.get("298020941173096450").send(message.content);
         console.log(message.content);
-        return;
     }
 });
 
