@@ -10,7 +10,7 @@ client.on("ready", () => {
 let prefix = "r";
 client.on("message", (message) => {
   // Exit and stop if the prefix is not there or if user is a bot
-  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix) || message.author.bot) return;
   
 const args = message.content.slice(prefix.length).split(/ +/);
 const command = args.shift().toLowerCase();
