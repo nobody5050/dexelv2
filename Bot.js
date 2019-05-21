@@ -46,14 +46,8 @@ const command = args.shift().toLowerCase();
 	message.channel.send(`Command name: ${command}\nArguments: ${args}`);
   }
   else if (command === 'say') {
-	aimlHigh = require('./aiml-high');
-	var interpreter = new aimlHigh({name:'Bot', age:'42'}, 'Goodbye');
-        interpreter.loadFiles(['./test.aiml.xml']);
-	  
-	  var callback = function(answer, wildCardArray, input){
-    console.log(answer + ' | ' + wildCardArray + ' | ' + input);
-};
-  interpreter.findAnswer('message.content', callback);	  
+	  message.channel.send(ai[0]);
+  }
 });
 
 client.login(process.env.BOT_TOKEN);
