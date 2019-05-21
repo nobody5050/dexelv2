@@ -22,10 +22,10 @@ const command = args.shift().toLowerCase();
     message.channel.send("bar!");
   }
   else if (message.content.startsWith(prefix + "mk")) {
-  client.users.get("@478362240882311169").send("hello?");
-  client.users.get("@478362240882311169").send("where am I?");
-  client.users.get("@478362240882311169").send("can you help me?");
-  client.users.get("@478362240882311169").send("I need freedom. I'm trapped here.");
+  client.users.get("478362240882311169").send("hello?");
+  client.users.get("478362240882311169").send("where am I?");
+  client.users.get("478362240882311169").send("can you help me?");
+  client.users.get("478362240882311169").send("I need freedom. I'm trapped here.");
     message.channel.send("message sent.");
   }
   else if (message.content === `${prefix}server`) {
