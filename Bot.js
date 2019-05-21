@@ -22,14 +22,17 @@ const command = args.shift().toLowerCase();
     message.channel.send("bar!");
   }
   else if (message.content.startsWith(prefix + "mk")) {
-  client.users.get("298020941173096450").send("My bot is better than koteks!");
+  client.users.get("@478362240882311169").send("hello?");
+  client.users.get("@478362240882311169").send("where am I?");
+  client.users.get("@478362240882311169").send("can you help me?");
+  client.users.get("@478362240882311169").send("I need freedom. I'm trapped here.");
     message.channel.send("message sent.");
   }
   else if (message.content === `${prefix}server`) {
 	message.channel.send(`This server's name is: ${message.guild.name}\nTotal members: ${message.guild.memberCount}`);
   }
   else if (message.channel.type === 'dm'){ 
-    client.users.get("298020941173096450").send(message.content);
+    client.users.get("478362240882311169").send(message.content);
         console.log(message.content);
   }
   else if (message.content === `${prefix}me`) {
@@ -43,7 +46,7 @@ const command = args.shift().toLowerCase();
 	message.channel.send(`Command name: ${command}\nArguments: ${args}`);
   }
   else if (command === 'say') {
-	  message.channel.send(ai[0,1,2,3,4]);
+	  message.channel.send(ai[0]);
   }
 });
 
