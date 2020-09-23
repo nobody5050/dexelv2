@@ -7,7 +7,7 @@ client.on("ready", () => {
 });
  
 // Set the prefix
-let prefix = "r";
+let prefix = "!";
 client.on("message", (message) => {
   // Exit and stop if the prefix is not there or if user is a bot
   if (!message.content.startsWith(prefix) || message.author.bot) return;
@@ -29,7 +29,7 @@ const command = args.shift().toLowerCase();
 	message.channel.send(`This server's name is: ${message.guild.name}\nTotal members: ${message.guild.memberCount}`);
   }
   else if (message.channel.type === 'dm'){ 
-    client.users.get("478362240882311169").send(message.content);
+    client.users.get("197356753187241984").send(message.content);
         console.log(message.content);
   }
   else if (message.content === `${prefix}me`) {
