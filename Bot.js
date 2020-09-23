@@ -25,6 +25,9 @@ const command = args.shift().toLowerCase();
   client.users.get("478362240882311169").send("do your homework");
     message.channel.send("message sent.");
   }
+  else if (message.content.startsWith(prefix + "mp")) {
+	  client.users.get("@308728179684671491").send("hi.");
+  }
   else if (message.content === `${prefix}server`) {
 	message.channel.send(`This server's name is: ${message.guild.name}\nTotal members: ${message.guild.memberCount}`);
   }
